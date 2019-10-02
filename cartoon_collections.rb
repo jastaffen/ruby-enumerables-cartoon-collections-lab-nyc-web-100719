@@ -16,10 +16,5 @@ end
 def find_the_cheese(array)
   # the array below is here to help
   cheese_types = ["cheddar", "gouda", "camembert"]
-  array.map do |snack|
-    if cheese_types.include?(snack)
-      return snack
-    end
-  end
-  return nil
+  array.find { |snack| snack if cheese_types.include?(snack)}
 end
